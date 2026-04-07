@@ -297,7 +297,8 @@ async function startServer() {
   const vite = await createViteServer({
     server: {
       middlewareMode: true,
-      hmr: { port: 24700 }  // Use custom port to avoid conflicts
+      hmr: { port: 24700 }, // Use custom port to avoid conflicts
+      allowedHosts: true   // Allows Render to display the site
     },
     appType: 'spa',
   });
